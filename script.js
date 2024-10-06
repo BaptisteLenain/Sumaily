@@ -1,4 +1,10 @@
-//require('dotenv').config(); // Load environment variables from .env file
+import config from './config.js'; // Import the config file
+
+const OPENWEATHERMAP_API_KEY = config.OPENWEATHERMAP_API_KEY; // For OpenWeatherMap API
+const NEWS_API_KEY = config.NEWS_API_KEY; // For News API
+
+console.log('OpenWeatherMap API Key:', OPENWEATHERMAP_API_KEY);
+console.log('News API Key:', NEWS_API_KEY);
 
 document.addEventListener('DOMContentLoaded', function() {
     updateDate();
@@ -20,12 +26,12 @@ function updateDate() {
 
 async function fetchWeather() {
     console.log('Fetching weather data...');
-    if (!process.ENV || !process.ENV.OPENWEATHERMAP_API_KEY) {
+    if (!OPENWEATHERMAP_API_KEY) {
         console.error('API key not found. Make sure env.js is loaded and contains the key.');
         document.querySelector('#weather .content').textContent = 'Weather data unavailable';
         return;
     }
-    const apiKey = process.ENV.OPENWEATHERMAP_API_KEY;
+    const apiKey = OPENWEATHERMAP_API_KEY;
     console.log('API Key:', apiKey); // This will log your API key, be careful not to share this log
     const city = 'Berlin'; // Replace with your desired city
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -260,16 +266,15 @@ async function updateBooks() {
 }
 
 async function fetchArticles(forceUpdate = false) {
-    const newsApiKey = process.ENV.NEWS_API_KEY; // Fetch the API key from environment variables
-    console.log('API Key:', newsApiKey); // Log the API key to check if it's set correctly
     const savedDate = localStorage.getItem('articlesDate');
     const today = new Date().toDateString();
     
+    // Check if we can use cached articles
     if (!forceUpdate && savedDate === today && localStorage.getItem('articles')) {
         return JSON.parse(localStorage.getItem('articles'));
     }
 
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApiKey}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${NEWS_API_KEY}`;
 
     try {
         const response = await fetch(url);
