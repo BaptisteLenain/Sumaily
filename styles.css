@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #000000; /* Black for main text */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #05668d; /* Darkest blue for main title */
+}
+
+h2 {
+    color: #05668d; /* Darkest blue for category titles */
+    border-bottom: 2px solid #00a896; /* Underline category titles with lightest blue */
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #00a896; /* Lightest blue for borders */
+}
+
+.content {
+    min-height: 100px;
+}
+
+/* Add this to your existing styles */
+
+.weather-info {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.weather-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #05668d; /* Darkest blue for sub-headings */
+}
+
+.weather-details p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+#random-facts .content {
+    font-style: italic;
+}
+
+#new-fact-btn, #new-history-btn, #new-books-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #05668d; /* Darkest blue for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#new-fact-btn:hover, #new-history-btn:hover, #new-books-btn:hover {
+    background-color: #00a896; /* Lightest blue for button hover */
+}
+
+/* Remove or comment out this style */
+/*
+#random-facts small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #666;
+}
+*/
+
+#german-words ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#german-words li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#german-words li:last-child {
+    border-bottom: none;
+}
+
+#book-recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#book-recommendations li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#book-recommendations li:last-child {
+    border-bottom: none;
+}
+
+#book-recommendations h3,
+#book-recommendations h3 a,
+#book-recommendations h3 a:link,
+#book-recommendations h3 a:visited {
+    color: #05668d !important; /* Same color as h2, using !important to override any default styles */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#book-recommendations h3 a:hover,
+#book-recommendations h3 a:active {
+    color: #00a896 !important; /* Lightest blue for hover state */
+    text-decoration: underline;
+}
+
+#book-recommendations .read-more {
+    background: none;
+    border: none;
+    color: #05668d; /* Same color as h2 */
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    display: inline;
+    transition: color 0.3s ease;
+}
+
+#book-recommendations .read-more:hover {
+    color: #00a896; /* Lightest blue for hover state */
+    text-decoration: underline;
+}
+
+#book-recommendations a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#book-recommendations a:hover {
+    text-decoration: underline;
+}
+
+#book-recommendations .more {
+    display: none;
+}
+
+
+/* Remove or comment out these styles */
+/*
+#youtube-recommendations ul { ... }
+#youtube-recommendations li { ... }
+#youtube-recommendations img { ... }
+#youtube-recommendations h3 { ... }
+#youtube-recommendations a { ... }
+#youtube-recommendations a:hover h3 { ... }
+#new-videos-btn { ... }
+#new-videos-btn:hover { ... }
+*/
+
+
+/* Remove or comment out these styles if they exist */
+/*
+#tool-recommendations ul { ... }
+#tool-recommendations li { ... }
+#tool-recommendations h3 { ... }
+#tool-recommendations p { ... }
+*/
+
+
+#article-recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#article-recommendations li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#article-recommendations h3 {
+    margin: 5px 0;
+    color: #05668d; /* Same color as h2 */
+}
+
+#article-recommendations a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#article-recommendations a:hover {
+    color: #00a896; /* Lightest blue for hover state */
+    text-decoration: underline;
+}
+
+#new-articles-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #05668d; /* Darkest blue for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#new-articles-btn:hover {
+    background-color: #00a896; /* Lightest blue for button hover */
+}
+
+#article-recommendations li:last-child {
+    border-bottom: none;
+}
+
+
+#quotes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#quotes li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#quotes h3 {
+    margin: 5px 0;
+    color: #05668d; /* Same color as h2 */
+}
+
+#quotes a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#quotes a:hover {
+    color: #00a896; /* Lightest blue for hover state */
+    text-decoration: underline;
+}
+
+#new-quotes-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #05668d; /* Darkest blue for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#new-quotes-btn:hover {
+    background-color: #00a896; /* Lightest blue for button hover */
+}
+
+#quotes li:last-child {
+    border-bottom: none;
+}
