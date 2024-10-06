@@ -28,7 +28,3 @@ This project uses vanilla HTML, CSS, and JavaScript. To make changes:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).

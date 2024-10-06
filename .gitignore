@@ -9,3 +9,7 @@ node_modules/
 
 # Ignore any log files
 *.log
+
+# Ignore Code and Test_hosting_app_01 directories
+Code/
+Test_hosting_app_01/
